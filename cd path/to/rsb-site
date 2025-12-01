@@ -1,2 +1,6 @@
 git init
+git add .
+git commit -m "Initial website upload"
+git remote add origin https://github.com/YOUR_USERNAME/rsb-dashboard.git
+git branch -M main
 
