@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Investor Dashboard — RSB Coin</title>
+
+<style>
+:root{
+  --bg:#0f3f2d;
+  --card:#145a42;
+  --accent:#22c55e;
+  --muted:#bbf7d0;
+  --success:#16f4a7;
+  --text:#ffffff;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Arial;
+  background:linear-gradient(140deg,#0f3f2d,#0b2f23);
+  color:var(--text);
+}
+
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:220px;
+  padding:26px;
+  background:linear-gradient(180deg,#0c3d2b,#06251a);
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  color:#22ff9c;
+  margin-bottom:16px;
+}
+
+.nav a{
+  display:block;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:6px;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.nav a.active{
+  background:var(--accent);
+  color:#022c1d
+}
+.nav a:hover{
+  background:#1dd478;
+  color:#022c1d
+}
+
+/* Main */
+.main{
+  flex:1;
+  padding:36px 40px;
+}
+
+h1{margin:0 0 6px;font-size:28px;font-weight:800}
+.muted{color:var(--muted)}
+
+.hero-bg{
+  margin:18px 0;
+  padding:40px;
+  border-radius:18px;
+  background:
+   linear-gradient(rgba(11,47,35,.85),rgba(11,47,35,.85)),
+   url("rsb-bg.jpg") center/cover no-repeat;
+}
+
+.hero-bg h2{margin:0 0 8px;font-size:32px}
+.hero-bg h3{margin:0;color:#22ff9c}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:18px;
+}
+
+@media(max-width:800px){
+  .grid{grid-template-columns:1fr}
+}
+
+.card{
+  background:linear-gradient(180deg,#145a42,#0d4532);
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.25);
+}
+
+.small{color:#bbf7d0;font-weight:600}
+
+.num{font-size:26px;color:#22ff9c;font-weight:800}
+.balance{font-size:32px;color:#22ff9c;font-weight:800}
+
+.btn{
+  background:linear-gradient(135deg,#22c55e,#16f4a7);
+  border:0;
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:800;
+  color:#022c1d;
+  cursor:pointer;
+}
+
+.btn:hover{opacity:.9}
+
+.btn.ghost{
+  background:transparent;
+  border:2px solid #22ff9c;
+  color:#22ff9c;
+}
+
+.chart{
+  height:120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#bbf7d0;
+  font-weight:700;
+}
+
+.claim-card{
+  display:flex;
+  justify-content:space-between;
+  background:linear-gradient(90deg,#11563f,#083628);
+  border-radius:12px;
+  margin-top:10px;
+  padding:14px;
+}
+
+/* Modal */
+
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal{
+  width:90%;
+  max-width:420px;
+  background:linear-gradient(180deg,#145a42,#0a3b2a);
+  border-radius:12px;
+  padding:20px;
+}
+
+.modal h2{margin-top:0}
+
+label{
+  font-size:13px;
+  font-weight:700;
+  color:#bbf7d0;
+}
+
+input{
+  width:100%;
+  margin:5px 0 12px;
+  padding:9px;
+  border-radius:8px;
+  border:0;
+  font-weight:700;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- Sidebar -->
+<aside class="sidebar">
+  <div class="logo">Rashid Saif Belhasa Family</div>
+  <nav class="nav">
+    <a class="active">Dashboard</a>
+    <a>My Asset</a>
+    <a>Withdraw</a>
+    <a>Earnings</a>
+    <a>My Team</a>
+    <a>My Profile</a>
+  </nav>
+</aside>
+
+<!-- Main -->
+<main class="main">
+
+<header style="display:flex;justify-content:space-between;align-items:center">
+  <div>
+    <h1>Welcome, FAHIM BHAI</h1>
+    <div class="muted">Wish your success in Millionaire family</div>
+  </div>
+  <div style="text-align:right">
+    <div class="small">Account</div>
+    <b>mymoneykiks.com</b>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-bg">
+  <h2>MY MONEY KIKS — RSB COIN</h2>
+  <h3>UPCOMING 2026 • UAE</h3>
+  <p style="max-width:450px;color:#bbf7d0;font-weight:600">
+    Next-generation crypto mining ecosystem launching from UAE.
+    Automated reward claims + long-term passive income structure.
+  </p>
+</section>
+
+<section>
+
+<div class="grid">
+
+<div class="card">
+  <div class="small">Total Invested</div>
+  <div class="num">$2,000</div>
+</div>
+
+<div class="card">
+  <div class="small">Total Earnings</div>
+  <div class="num">$420</div>
+</div>
+
+<div class="card">
+  <div class="small">Current Balance</div>
+  <div class="balance">$1,200</div>
+  <div style="margin-top:12px">
+    <button class="btn">Withdraw</button>
+    <button class="btn ghost" onclick="openModal()" style="margin-left:8px">Coin Claim</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="small">Coin update (Coming Soon 2026)</div>
+  <div class="chart">[ Mining 365 Day TR Exchange — UAE ]</div>
+
+  <div class="claim-card">
+    <div>
+      <b>Coin Claim</b>
+      <div class="small">Future Coin Reward</div>
+    </div>
+    <div style="text-align:right">
+      <div>Available: <b>5000 SRB COIN</b></div>
+      <button class="btn" onclick="openModal()" style="margin-top:8px">Claim Now</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer style="margin-top:30px;font-size:13px;color:#bbf7d0">
+✅ Withdrawal requires KYC verification.<br>
+Demo Profit Range: 10% – 15% Monthly | Leader Income: Direct 10% + 10 Levels 20%
+</footer>
+
+</section>
+
+</main>
+</div>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="claimModal">
+  <div class="modal">
+    <h2>🪙 Coin Claim Request</h2>
+
+    <label>EMAIL VERIFICATION</label>
+    <input type="text" placeholder="OTP">
+
+    <label>Email</label>
+    <input type="email" placeholder="Email address">
+
+    <label>Wallet (BEP-20 ADRESS)</label>
+    <input type="text" placeholder="RSB Wallet address">
+
+    <label>Coin Amount</label>
+    <input type="number" placeholder="1000">
+
+    <div style="text-align:right">
+      <button class="btn ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn" onclick="submitClaim()">Submit</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const modal=document.getElementById("claimModal");
+
+function openModal(){modal.style.display="flex";}
+function closeModal(){modal.style.display="none";}
+
+function submitClaim(){
+  alert("✅ Claim submitted successfully!\n\nProcessing: 24–48 hours after KYC.");
+  closeModal();
+}
+
+modal.addEventListener("click",e=>{
+  if(e.target===modal) closeModal();
+});
+</script>
+
+</body>
+</html>
